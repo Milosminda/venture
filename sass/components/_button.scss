@@ -1,0 +1,16 @@
+.btn {
+	font-size: 2rem;
+	width: 22rem;
+	height: 6rem;
+	color: $color-primary;
+	background-color: transparent;
+	outline: none;
+	border: 2px solid $color-primary;
+	cursor: pointer;
+	border-radius: 2px;
+	transition: all .2s;
+	&--light:hover {
+		color: $color-secondary;
+		border-color: $color-secondary;
+	}
+}

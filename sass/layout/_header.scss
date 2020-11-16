@@ -1,0 +1,63 @@
+.header {
+	background-image: linear-gradient(
+										to right bottom, rgba($color-grey-dark-3, 0.7), 
+										rgba($color-grey-dark-3, 0.7)), url(../img/bkg-min.jpg);
+	// Img respond 
+	@include respond-img {
+		background-image: linear-gradient(
+										to right bottom, rgba($color-grey-dark-3, 0.7), 
+										rgba($color-grey-dark-3, 0.7)), url(../img/bkg.jpg);
+	}
+	background-size: cover;
+	background-position: center;
+	grid-column: full-start / full-end;
+	display: grid;
+	grid-template-rows: 8rem 1fr repeat(1, min-content) 1fr;
+	grid-template-columns: repeat(8, minmax(min-content, 25%)) 8rem;
+	// Responsive phone min
+	@include respond(phone-min) {
+		background-attachment: fixed
+	}
+	// Responsive 2000
+	@include respond(big-desktop) {
+		grid-template-columns: 1fr repeat(7, minmax(min-content, 25rem)) 8rem 1fr;
+	}
+	// Responsive 600
+	@include respond(phone) {
+		grid-template-rows: 8rem 20rem repeat(1, min-content) 1fr;
+	}
+	// Responsive 450
+	@include respond(phone-medium) {
+		background-image: linear-gradient(
+										to right bottom, rgba($color-grey-dark-3, 0.7), 
+										rgba($color-grey-dark-3, 0.7)), url(../img/bkg-min-phone.jpg);
+	}
+	&__logo {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		@include respond(big-desktop) {
+		grid-column: 3 / 4;
+	}
+		&-img {
+			height: 100%;
+			width: 18rem;
+		}
+	}
+	&__box {
+		display: grid;
+		grid-row: 3 / 4;
+		grid-column: 3 / 8;
+		grid-row-gap: 1.5rem;
+		// Responsive 1050
+		@include respond(tab-land-medium) {grid-column: 2 / 9;}
+		// Responsive 600
+		@include respond(phone) {grid-column: 2 / -1;}
+		&-text {
+			font-size: 1.6rem;
+			font-weight: 300;
+		}
+		&-btn {
+			animation: animated-btn 2s;
+		}
+	}
+}

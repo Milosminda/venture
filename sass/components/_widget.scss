@@ -1,0 +1,42 @@
+.widget {
+		grid-row: 3 / 4;
+		grid-column: 2 / 6;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(10rem, min-content));
+		justify-content: space-evenly;
+		// Responsive 600px
+		@include respond(phone) {
+			// grid-template-columns: repeat(2, minmax(10rem, min-content));
+			grid-template-columns: repeat(2, min-content);
+			grid-row-gap: 2rem;
+			grid-column: 3 / 5;
+		}
+		// Responsive 450px
+		@include respond(phone-medium) {grid-column: 2 / 4;}
+	&__container {
+		background-color: rgba($color-grey-dark-3, .8);
+		width: 13rem;
+		height: 13rem;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__number {
+		color: $color-secondary;
+		font-size: 2.3rem;
+		&-m {
+			color: $color-grey-dark-3;
+		}
+	}
+	&__title {
+		color: $color-primary;
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 1.1rem;
+	}
+	&__marked {
+		background-color: $color-secondary;
+	}
+}

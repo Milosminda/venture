@@ -1,0 +1,40 @@
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: #eee;
+	z-index: 999;
+  cursor: pointer;
+}
+.testimonial__label {
+	position: relative;
+}
+.checkmark:hover {
+  background-color: #ccc;
+}
+input[type="radio"]:checked ~ .testimonial__label > * {
+	 background-color: $color-secondary;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+input[type="radio"]:checked ~ .testimonial__label > .checkmark:after {
+	 display: block;
+}
+/* Style the indicator (dot/circle) */
+.testimonial__label .checkmark:after {
+ 	top: 6.4px;
+	left: 5px;
+	width: 9px;
+	height: 8px;
+	border-radius: 50%;
+	background: $color-primary;
+}
+

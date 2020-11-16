@@ -1,0 +1,44 @@
+@keyframes heading-1 {
+	0% {
+		transform: translateY(-100%);
+	}
+	80% {
+	transform: translateY(10%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@keyframes heading-2 {
+	0% {
+		transform: translateY(-100%);
+	}
+	80% {
+	transform: translateY(10%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@keyframes animated-btn {
+	0% {
+		transform: translateY(150%);
+		opacity: 0;
+	}
+	80% {
+		transform: translateY(-10%);
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+// Animations 
+.js--wp-h2-1, .js--wp-h2-2,
+.js--wp-h2-3, .js--wp-h2-4,
+.js--wp-h2-5, .js--wp-h2-6 {
+	opacity: 0;
+}
+.animate-animated {
+	opacity: 1;
+}

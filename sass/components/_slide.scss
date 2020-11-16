@@ -1,0 +1,8 @@
+[type="radio"]:checked ~ label ~ .testimonial__content > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+[type="radio"] {
+	width: 1rem;
+	z-index: 1;
+}
